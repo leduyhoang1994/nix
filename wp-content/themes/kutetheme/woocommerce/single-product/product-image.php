@@ -23,7 +23,7 @@ global $post, $woocommerce, $product;
 
 ?>
 <div class="images">
-
+	hahah
 	<?php
 		if ( has_post_thumbnail() ) {
 
