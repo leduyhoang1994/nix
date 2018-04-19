@@ -117,7 +117,7 @@ $classes[] = 'col-xs-'.$kt_woo_mobile_grid_column;
             // }
             ?>
             <h5 class="product-name"><a title="<?php echo esc_attr( get_the_title() );?>" href="<?php the_permalink(); ?>"><?php the_title( ); ?></a></h5>
-            <div class="content_price">123
+            <div class="content_price">
                 <?php
         			/**
         			 * woocommerce_after_shop_loop_item_title hook
