@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post, $woocommerce, $product;
 
 ?>
-<div class="images">aa
+<div class="images">
 	<?php
 		if ( has_post_thumbnail() ) {
 
