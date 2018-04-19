@@ -70,7 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <h5 class="product-name">
             <a title="<?php echo esc_attr( get_the_title() );?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </h5>
-        <div class="content_price">
+        <div class="content_price">123
         <?php
 			/**
 			 * woocommerce_after_shop_loop_item_title hook
