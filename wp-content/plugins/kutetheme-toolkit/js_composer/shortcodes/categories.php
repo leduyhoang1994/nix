@@ -203,13 +203,11 @@ class WPBakeryShortCode_Categories extends WPBakeryShortCode {
                             $img = $image[0];
                         endif; ?>
                         <div class="cate-tit" style="background:url(<?= $img ?>); background-size: cover">
-                            <div class="div-1" style="width: 46%;">
+                            <div class="div-1" style="width: 100%;">
                                 <div class="cate-name-wrap">
                                     <p class="cate-name"><?php echo esc_html($term->name) ?></p>
                                 </div>
                                 <a href="<?php echo esc_url( $term_link ); ?>" class="cate-link link-active" data-ac="flipInX" ><span><?php _e('shop now', 'kutetheme') ?></span></a>
-                            </div>
-                            <div class="div-2" >
                             </div>
                         </div>
                         <?php if( count( $children ) >0 ): ?>
