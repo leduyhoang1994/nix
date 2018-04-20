@@ -192,7 +192,7 @@ class WPBakeryShortCode_Categories extends WPBakeryShortCode {
                     $thumbnail_id = absint( get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true ) );
 
             		if ( $thumbnail_id ) {
-                        $image = wp_get_attachment_image( intval( $thumbnail_id ),'full', 0, array( 'class' => 'hot-cate-img' ) );
+                        $image = wp_get_attachment_image_src( intval( $thumbnail_id ),'full');
             		} else {
             			$image = "";
             		}
