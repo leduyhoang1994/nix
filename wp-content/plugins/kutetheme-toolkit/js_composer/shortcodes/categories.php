@@ -202,7 +202,7 @@ class WPBakeryShortCode_Categories extends WPBakeryShortCode {
                         <?php if($image) :
                             $img = $image[0];
                         endif; ?>
-                        <div class="cate-tit" style="background:url(<?= $img ?>) cover">
+                        <div class="cate-tit" style="background:url(<?= $img ?>); background-size: cover">
                             <div class="div-1" style="width: 46%;">
                                 <div class="cate-name-wrap">
                                     <p class="cate-name"><?php echo esc_html($term->name) ?></p>
