@@ -199,7 +199,10 @@ class WPBakeryShortCode_Categories extends WPBakeryShortCode {
                     $children = get_terms( 'product_cat', $arg_child );
                 ?>
                     <div class="<?php echo esc_attr($classes) ?> cate-box">
-                        <div class="cate-tit">
+                        <?php if($image) :
+                            $img = apply_filters( 'kt_hot_category_image_' . $term->slug , $image);
+                        endif; ?>
+                        <div class="cate-tit" style="background:url(<?= $img ?>) cover">
                             <div class="div-1" style="width: 46%;">
                                 <div class="cate-name-wrap">
                                     <p class="cate-name"><?php echo esc_html($term->name) ?></p>
@@ -207,13 +210,7 @@ class WPBakeryShortCode_Categories extends WPBakeryShortCode {
                                 <a href="<?php echo esc_url( $term_link ); ?>" class="cate-link link-active" data-ac="flipInX" ><span><?php _e('shop now', 'kutetheme') ?></span></a>
                             </div>
                             <div class="div-2" >
-                                <?php if($image) : ?>
-                                <a href="<?php echo esc_url( $term_link ); ?>">
-                                    <?php echo apply_filters( 'kt_hot_category_image_' . $term->slug , $image) ?>
-                                </a>
-                                <?php endif; ?>
                             </div>
-                            
                         </div>
                         <?php if( count( $children ) >0 ): ?>
                         <div class="cate-content">
