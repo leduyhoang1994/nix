@@ -192,7 +192,7 @@ class WPBakeryShortCode_Categories extends WPBakeryShortCode {
                     $thumbnail_id = absint( get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true ) );
 
             		if ( $thumbnail_id ) {
-                        $image = wp_get_attachment_image_src( intval( $thumbnail_id ),'full');
+                        $image = wp_get_attachment_image_src( intval( $thumbnail_id ),'thumbnail');
             		} else {
             			$image = "";
             		}
@@ -200,7 +200,7 @@ class WPBakeryShortCode_Categories extends WPBakeryShortCode {
                 ?>
                     <div class="<?php echo esc_attr($classes) ?> cate-box">
                         <?php if($image) :
-                            $img = $image;
+                            $img = $image[0];
                         endif; ?>
                         <div class="cate-tit" style="background:url(<?= $img ?>) cover">
                             <div class="div-1" style="width: 46%;">
