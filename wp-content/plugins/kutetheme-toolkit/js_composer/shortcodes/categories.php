@@ -200,7 +200,7 @@ class WPBakeryShortCode_Categories extends WPBakeryShortCode {
                 ?>
                     <div class="<?php echo esc_attr($classes) ?> cate-box">
                         <?php if($image) :
-                            $img = apply_filters( 'kt_hot_category_image_' . $term->slug , $image);
+                            $img = $image;
                         endif; ?>
                         <div class="cate-tit" style="background:url(<?= $img ?>) cover">
                             <div class="div-1" style="width: 46%;">
