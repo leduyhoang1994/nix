@@ -652,3 +652,41 @@ if( ! function_exists( 'kt_list_cats' ) ){
         echo wp_kses( $cat_string, $allowed_html );
     }
 }
+
+//Custom
+
+add_action( 'admin_menu', 'rename_woocoomerce_wpse_100758', 999 );
+
+function rename_woocoomerce_wpse_100758() 
+{
+    global $menu;
+
+    // Pinpoint menu item
+    $woo = recursive_array_search_php_91365( 'WooCommerce', $menu );
+
+    // Validate
+    if( !$woo )
+        return;
+
+    $menu[$woo][0] = 'Store Settings';
+}
+
+// http://www.php.net/manual/en/function.array-search.php#91365
+function recursive_array_search_php_91365( $needle, $haystack ) 
+{
+    foreach( $haystack as $key => $value ) 
+    {
+        $current_key = $key;
+        if( 
+            $needle === $value 
+            OR ( 
+                is_array( $value )
+                && recursive_array_search_php_91365( $needle, $value ) !== false 
+            )
+        ) 
+        {
+            return $current_key;
+        }
+    }
+    return false;
+}
