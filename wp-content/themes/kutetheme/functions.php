@@ -671,8 +671,7 @@ function rename_woocoomerce_wpse_100758()
     $menu[$woo][0] = 'Quản lý đơn hàng';
 
     // Pinpoint menu item
-    $woo = recursive_array_search_php_91365( 'Mege Menu', $menu );
-    var_dump($woo);
+    $woo = recursive_array_search_php_91365( 'Mega Menu', $menu );
     // Validate
     if( !$woo )
         return;
