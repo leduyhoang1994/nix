@@ -672,7 +672,7 @@ function rename_woocoomerce_wpse_100758()
 
     // Pinpoint menu item
     $woo = recursive_array_search_php_91365( 'Mege Menu', $menu );
-
+    var_dump($woo);
     // Validate
     if( !$woo )
         return;
