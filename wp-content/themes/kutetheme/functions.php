@@ -695,10 +695,11 @@ function remove_menus() {
     $hideRole = "shop_manager";
     $userInfo = get_userdata(get_current_user_id());
     $userRoles = $userInfo->roles;
-    
+
     if (in_array($hideRole, $userRoles)) {
         remove_menu_page( 'edit.php?post_type=testimonial' );    //Pages  te
         remove_menu_page( 'edit.php?post_type=look-books' );    //Pages  te
+        remove_menu_page( 'admin.php?page=vc-welcome' );    //Pages  te
     }
   }
   add_action( 'admin_menu', 'remove_menus' );
