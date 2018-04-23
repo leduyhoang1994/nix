@@ -669,6 +669,15 @@ function rename_woocoomerce_wpse_100758()
         return;
 
     $menu[$woo][0] = 'Quản lý đơn hàng';
+
+    // Pinpoint menu item
+    $woo = recursive_array_search_php_91365( 'Mege Menu', $menu );
+
+    // Validate
+    if( !$woo )
+        return;
+
+    $menu[$woo][0] = 'Quản lý menu';
 }
 
 // http://www.php.net/manual/en/function.array-search.php#91365
