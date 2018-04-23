@@ -692,9 +692,10 @@ function recursive_array_search_php_91365( $needle, $haystack )
 }
 
 function remove_menus() {
+    $hideRole = "shop_manager";
     $userInfo = get_userdata(get_current_user_id());
     $userRoles = $userInfo->roles;
-    var_dump($userRoles);
+    
     if (in_array($hideRole, $userRoles)) {
         remove_menu_page( 'edit.php?post_type=testimonial' );    //Pages  te
         remove_menu_page( 'edit.php?post_type=look-books' );    //Pages  te
