@@ -668,7 +668,7 @@ function rename_woocoomerce_wpse_100758()
     if( !$woo )
         return;
 
-    $menu[$woo][0] = 'Store Settings';
+    $menu[$woo][0] = 'Quản lý đơn hàng';
 }
 
 // http://www.php.net/manual/en/function.array-search.php#91365
