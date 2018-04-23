@@ -695,7 +695,7 @@ function remove_menus() {
     $hideRole = 'shop_manager';
     $userInfo = get_userdata(1);
     $userRoles = $userInfo->roles;
-
+    var_dump($userRoles);
     if (in_array($hideRole, $userRoles)) {
         remove_menu_page( 'edit.php?post_type=testimonial' );    //Pages  te
         remove_menu_page( 'edit.php?post_type=look-books' );    //Pages  te
