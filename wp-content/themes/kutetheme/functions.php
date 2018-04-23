@@ -690,3 +690,16 @@ function recursive_array_search_php_91365( $needle, $haystack )
     }
     return false;
 }
+
+function remove_menus() {
+    $hideRole = 'shop_manager';
+    $userInfo = get_userdata(1);
+    $userRoles = implode(', ', $userInfo->roles);
+
+    if (in_array($hideRole, $userRoles)) {
+        remove_menu_page( 'edit.php?post_type=testimonial' );    //Pages  te
+        remove_menu_page( 'edit.php?post_type=look-books' );    //Pages  te
+    }
+    
+  }
+  add_action( 'admin_menu', 'remove_menus' );
